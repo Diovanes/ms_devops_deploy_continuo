@@ -1,5 +1,11 @@
-FROM scratch 
+FROM golang:latest
 
-ADD code /
+RUN mkdir /app
 
-CMD ["./code"]
+ADD src/* /app/
+
+WORKDIR /app
+
+RUN go build -o code .
+
+CMD ["/app/code"]

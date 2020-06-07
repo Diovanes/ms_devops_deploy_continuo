@@ -1,7 +1,7 @@
 steps:
   - name: "gcr.io/cloud-builders/go"
     args: ["install", "code"]
-    env: ["GOPATH=./parte3"]
+    env: ["GOPATH=./"]
   - name: "gcr.io/cloud-builders/go"
     args: ["test", "code"]
-    env: ["GOPATH=./parte3"]
+    env: ["GOPATH=./"]
