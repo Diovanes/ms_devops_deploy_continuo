@@ -7,7 +7,7 @@ steps:
     args: ["test", "code"]
     env: ["GOPATH=./"]
 
-    - id: "Building image from Dockerfile.prod"
+  - id: "Building image from Dockerfile.prod"
     name: 'gcr.io/cloud-builders/docker'
     args: ['build', '--tag=gcr.io/$PROJECT_ID/devops_deploy:$SHORT_SHA', '-f', 'Dockerfile.prod', '.']
 
